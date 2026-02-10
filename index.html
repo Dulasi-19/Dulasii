@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional Portfolio - Designer, Developer & Creative Professional">
+    <meta name="keywords" content="portfolio, web developer, designer, freelancer">
+    <meta name="author" content="Your Name">
+    <title>Brilio - Personal Portfolio</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Google Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-circle"></div>
+            <p class="loader-text">Loading...</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="#home" class="logo">
+                    <span class="logo-text">Brilio</span>
+                    <span class="logo-dot">.</span>
+                </a>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                    <li><a href="#resume" class="nav-link">Resume</a></li>
+                    <li><a href="#blog" class="nav-link">Blog</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                        <i class="bi bi-moon-stars-fill"></i>
+                    </button>
+                    <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="hero-greeting">Hello, I'm</span>
+                    <h1 class="hero-title">
+                        <span class="title-line">Creative</span>
+                        <span class="title-line gradient-text">Designer</span>
+                        <span class="title-line">& Developer</span>
+                    </h1>
+                    <p class="hero-description">
+                        I craft beautiful digital experiences with modern design and clean code. 
+                        Specializing in web development, UI/UX design, and creative solutions.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#portfolio" class="btn btn-primary">
+                            <span>View My Work</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-outline">
+                            <span>Get In Touch</span>
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <h3 class="stat-number">5+</h3>
+                            <p class="stat-label">Years Experience</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="stat-number">150+</h3>
+                            <p class="stat-label">Projects Completed</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="stat-number">50+</h3>
+                            <p class="stat-label">Happy Clients</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-wrapper">
+                        <div class="profile-card">
+                            <div class="profile-avatar">
+                                <div class="avatar-placeholder">
+                                    <i class="bi bi-person-circle"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="floating-badge badge-1">
+                            <i class="bi bi-code-slash"></i>
+                            <span>Web Dev</span>
+                        </div>
+                        <div class="floating-badge badge-2">
+                            <i class="bi bi-palette"></i>
+                            <span>UI/UX</span>
+                        </div>
+                        <div class="floating-badge badge-3">
+                            <i class="bi bi-lightning-charge"></i>
+                            <span>Creative</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll Down</span>
+            <div class="scroll-arrow">
+                <i class="bi bi-arrow-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Get To Know</span>
+                <h2 class="section-title">About Me</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="about-image-wrapper">
+                        <div class="about-avatar">
+                            <i class="bi bi-person-workspace"></i>
+                        </div>
+                        <div class="about-shape"></div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3 class="about-subtitle">I'm a Creative Designer & Developer</h3>
+                    <p class="about-description">
+                        With over 5 years of experience in web development and design, I specialize in creating 
+                        stunning digital experiences that combine beautiful aesthetics with powerful functionality. 
+                        My passion lies in transforming ideas into reality through clean code and innovative design.
+                    </p>
+                    <p class="about-description">
+                        I believe in the power of simplicity and user-centered design. Every project I undertake 
+                        is an opportunity to push boundaries and create something exceptional that not only meets 
+                        but exceeds expectations.
+                    </p>
+                    <div class="about-info">
+                        <div class="info-item">
+                            <span class="info-label">Name:</span>
+                            <span class="info-value">Your Name</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Email:</span>
+                            <span class="info-value">hello@example.com</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Location:</span>
+                            <span class="info-value">New York, USA</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Freelance:</span>
+                            <span class="info-value">Available</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn btn-primary">
+                        <span>Hire Me</span>
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services section" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">What I Do</span>
+                <h2 class="section-title">My Services</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="bi bi-code-square"></i>
+                    </div>
+                    <h3 class="service-title">Web Development</h3>
+                    <p class="service-description">
+                        Building responsive, fast, and scalable websites using modern technologies 
+                        and best practices.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="bi bi-check-circle-fill"></i> Responsive Design</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Performance Optimization</li>
+                        <li><i class="bi bi-check-circle-fill"></i> SEO Friendly</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="bi bi-palette-fill"></i>
+                    </div>
+                    <h3 class="service-title">UI/UX Design</h3>
+                    <p class="service-description">
+                        Creating intuitive and beautiful user interfaces that provide exceptional 
+                        user experiences.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="bi bi-check-circle-fill"></i> User Research</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Wireframing</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Prototyping</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="bi bi-phone"></i>
+                    </div>
+                    <h3 class="service-title">Mobile Development</h3>
+                    <p class="service-description">
+                        Developing cross-platform mobile applications with native performance 
+                        and smooth animations.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="bi bi-check-circle-fill"></i> iOS & Android</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Cross-Platform</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Native Performance</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="bi bi-graph-up-arrow"></i>
+                    </div>
+                    <h3 class="service-title">Brand Strategy</h3>
+                    <p class="service-description">
+                        Developing comprehensive brand strategies that help businesses stand out 
+                        in the digital landscape.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="bi bi-check-circle-fill"></i> Brand Identity</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Marketing Strategy</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Content Creation</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="bi bi-rocket-takeoff"></i>
+                    </div>
+                    <h3 class="service-title">Digital Marketing</h3>
+                    <p class="service-description">
+                        Implementing effective digital marketing strategies to grow your online 
+                        presence and reach.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="bi bi-check-circle-fill"></i> SEO Optimization</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Social Media</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Analytics</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="bi bi-gear-fill"></i>
+                    </div>
+                    <h3 class="service-title">Consulting</h3>
+                    <p class="service-description">
+                        Providing expert consultation on technology choices, architecture, and 
+                        best practices.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="bi bi-check-circle-fill"></i> Tech Stack</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Architecture</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Best Practices</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio section" id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">My Work</span>
+                <h2 class="section-title">Featured Projects</h2>
+            </div>
+            
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="web">Web Design</button>
+                <button class="filter-btn" data-filter="mobile">Mobile App</button>
+                <button class="filter-btn" data-filter="branding">Branding</button>
+            </div>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="bi bi-browser-chrome"></i>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3 class="portfolio-title">E-Commerce Platform</h3>
+                                <p class="portfolio-category">Web Design</p>
+                                <div class="portfolio-links">
+                                    <a href="#" class="portfolio-link"><i class="bi bi-eye"></i></a>
+                                    <a href="#" class="portfolio-link"><i class="bi bi-link-45deg"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="mobile">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="bi bi-phone"></i>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3 class="portfolio-title">Fitness Tracking App</h3>
+                                <p class="portfolio-category">Mobile App</p>
+                                <div class="portfolio-links">
+                                    <a href="#" class="portfolio-link"><i class="bi bi-eye"></i></a>
+                                    <a href="#" class="portfolio-link"><i class="bi bi-link-45deg"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="branding">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="bi bi-palette"></i>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3 class="portfolio-title">Brand Identity Design</h3>
+                                <p class="portfolio-category">Branding</p>
+                                <div class="portfolio-links">
+                                    <a href="#" class="portfolio-link"><i class="bi bi-eye"></i></a>
+                                    <a href="#" class="portfolio-link"><i class="bi bi-link-45deg"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="bi bi-laptop"></i>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3 class="portfolio-title">Corporate Website</h3>
+                                <p class="portfolio-category">Web Design</p>
+                                <div class="portfolio-links">
+                                    <a href="#" class="portfolio-link"><i class="bi bi-eye"></i></a>
+                                    <a href="#" class="portfolio-link"><i class="bi bi-link-45deg"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="mobile">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="bi bi-phone-fill"></i>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3 class="portfolio-title">Food Delivery App</h3>
+                                <p class="portfolio-category">Mobile App</p>
+                                <div class="portfolio-links">
+                                    <a href="#" class="portfolio-link"><i class="bi bi-eye"></i></a>
+                                    <a href="#" class="portfolio-link"><i class="bi bi-link-45deg"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="bi bi-globe"></i>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3 class="portfolio-title">Portfolio Website</h3>
+                                <p class="portfolio-category">Web Design</p>
+                                <div class="portfolio-links">
+                                    <a href="#" class="portfolio-link"><i class="bi bi-eye"></i></a>
+                                    <a href="#" class="portfolio-link"><i class="bi bi-link-45deg"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section class="resume section" id="resume">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">My Journey</span>
+                <h2 class="section-title">Resume</h2>
+            </div>
+            
+            <div class="resume-content">
+                <div class="resume-column">
+                    <h3 class="resume-column-title">
+                        <i class="bi bi-briefcase-fill"></i>
+                        Experience
+                    </h3>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2021 - Present</span>
+                                <h4 class="timeline-title">Senior Web Developer</h4>
+                                <p class="timeline-company">Tech Solutions Inc.</p>
+                                <p class="timeline-description">
+                                    Leading development of enterprise-level web applications, mentoring junior 
+                                    developers, and implementing best practices across the team.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2019 - 2021</span>
+                                <h4 class="timeline-title">Full Stack Developer</h4>
+                                <p class="timeline-company">Digital Agency Co.</p>
+                                <p class="timeline-description">
+                                    Developed and maintained multiple client websites and web applications using 
+                                    modern frameworks and technologies.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2018 - 2019</span>
+                                <h4 class="timeline-title">Junior Developer</h4>
+                                <p class="timeline-company">Startup Ventures</p>
+                                <p class="timeline-description">
+                                    Assisted in building responsive websites and learning modern web development 
+                                    practices and workflows.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="resume-column">
+                    <h3 class="resume-column-title">
+                        <i class="bi bi-mortarboard-fill"></i>
+                        Education
+                    </h3>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2022 - 2023</span>
+                                <h4 class="timeline-title">Master's in Computer Science</h4>
+                                <p class="timeline-company">University of Technology</p>
+                                <p class="timeline-description">
+                                    Specialized in web technologies, software architecture, and user experience design.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2014 - 2018</span>
+                                <h4 class="timeline-title">Bachelor's in Software Engineering</h4>
+                                <p class="timeline-company">State University</p>
+                                <p class="timeline-description">
+                                    Graduated with honors, focusing on web development and software design principles.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2020</span>
+                                <h4 class="timeline-title">UI/UX Design Certification</h4>
+                                <p class="timeline-company">Design Institute</p>
+                                <p class="timeline-description">
+                                    Completed comprehensive training in user interface and user experience design.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">My Expertise</span>
+                <h2 class="section-title">Skills</h2>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Frontend</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">HTML/CSS</span>
+                                <span class="skill-percentage">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">React</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Backend</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Node.js</span>
+                                <span class="skill-percentage">88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-percentage">82%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 82%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">PHP</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Design</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Figma</span>
+                                <span class="skill-percentage">92%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 92%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Adobe XD</span>
+                                <span class="skill-percentage">87%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 87%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Photoshop</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Client Feedback</span>
+                <h2 class="section-title">Testimonials</h2>
+            </div>
+            
+            <div class="testimonials-slider">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Exceptional work! The website exceeded our expectations in both design and functionality. 
+                        Professional, responsive, and a pleasure to work with."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="bi bi-person-circle"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4 class="author-name">John Smith</h4>
+                            <p class="author-position">CEO, Tech Corp</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Outstanding developer with great attention to detail. Delivered our project on time and 
+                        within budget. Highly recommended!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="bi bi-person-circle"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4 class="author-name">Sarah Johnson</h4>
+                            <p class="author-position">Marketing Director</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Creative, innovative, and technically skilled. The perfect combination for our project. 
+                        Will definitely work together again!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="bi bi-person-circle"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4 class="author-name">Michael Brown</h4>
+                            <p class="author-position">Founder, StartupX</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog section" id="blog">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Latest Posts</span>
+                <h2 class="section-title">From The Blog</h2>
+            </div>
+            
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <div class="blog-placeholder">
+                            <i class="bi bi-file-text"></i>
+                        </div>
+                        <span class="blog-category">Web Development</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date"><i class="bi bi-calendar"></i> Jan 15, 2024</span>
+                            <span class="blog-reading"><i class="bi bi-clock"></i> 5 min read</span>
+                        </div>
+                        <h3 class="blog-title">
+                            <a href="#">Modern Web Development Trends in 2024</a>
+                        </h3>
+                        <p class="blog-excerpt">
+                            Explore the latest trends shaping the future of web development, from AI integration 
+                            to progressive web apps.
+                        </p>
+                        <a href="#" class="blog-link">
+                            Read More <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <div class="blog-placeholder">
+                            <i class="bi bi-palette-fill"></i>
+                        </div>
+                        <span class="blog-category">Design</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date"><i class="bi bi-calendar"></i> Jan 10, 2024</span>
+                            <span class="blog-reading"><i class="bi bi-clock"></i> 4 min read</span>
+                        </div>
+                        <h3 class="blog-title">
+                            <a href="#">The Art of Minimalist UI Design</a>
+                        </h3>
+                        <p class="blog-excerpt">
+                            Learn how to create beautiful, functional interfaces using minimalist design principles 
+                            and best practices.
+                        </p>
+                        <a href="#" class="blog-link">
+                            Read More <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <div class="blog-placeholder">
+                            <i class="bi bi-lightbulb"></i>
+                        </div>
+                        <span class="blog-category">Tips & Tricks</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date"><i class="bi bi-calendar"></i> Jan 5, 2024</span>
+                            <span class="blog-reading"><i class="bi bi-clock"></i> 6 min read</span>
+                        </div>
+                        <h3 class="blog-title">
+                            <a href="#">10 CSS Tips for Better Performance</a>
+                        </h3>
+                        <p class="blog-excerpt">
+                            Optimize your CSS for better performance and faster load times with these proven 
+                            techniques and strategies.
+                        </p>
+                        <a href="#" class="blog-link">
+                            Read More <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Get In Touch</span>
+                <h2 class="section-title">Contact Me</h2>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3 class="contact-subtitle">Let's Work Together</h3>
+                    <p class="contact-description">
+                        Have a project in mind? Let's discuss how we can work together to bring your ideas to life. 
+                        I'm always open to new opportunities and collaborations.
+                    </p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="bi bi-envelope-fill"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p>hello@example.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="bi bi-telephone-fill"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Phone</h4>
+                                <p>+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="bi bi-geo-alt-fill"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Location</h4>
+                                <p>New York, USA</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="bi bi-github"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-dribbble"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-behance"></i></a>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">
+                        <span>Send Message</span>
+                        <i class="bi bi-send"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#home" class="footer-logo">
+                        <span class="logo-text">Brilio</span>
+                        <span class="logo-dot">.</span>
+                    </a>
+                    <p class="footer-description">
+                        Creating beautiful digital experiences with passion and precision.
+                    </p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Web Development</a></li>
+                        <li><a href="#services">UI/UX Design</a></li>
+                        <li><a href="#services">Mobile Apps</a></li>
+                        <li><a href="#services">Consulting</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to get latest updates</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email">
+                        <button type="submit"><i class="bi bi-send"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Brilio. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="bi bi-github"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                    <a href="#"><i class="bi bi-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>
