@@ -68,6 +68,65 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // ===================================
+    // CONTACT POPUP (NEWW REF)
+    // ===================================
+    const contactPopup = document.getElementById('contactPopup');
+    const closePopup = document.getElementById('closePopup');
+    const popupBackdrop = document.querySelector('.popup-backdrop');
+    const contactTriggers = document.querySelectorAll('.contact-trigger');
+
+    function openPopup(e) {
+        if (e) e.preventDefault();
+        contactPopup.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent scrolling
+    }
+
+    function closePopupFunc() {
+        contactPopup.classList.remove('active');
+        document.body.style.overflow = ''; // Restore scrolling
+    }
+
+    contactTriggers.forEach(trigger => {
+        trigger.addEventListener('click', openPopup);
+    });
+
+    if (closePopup) {
+        closePopup.addEventListener('click', closePopupFunc);
+    }
+
+    if (popupBackdrop) {
+        popupBackdrop.addEventListener('click', closePopupFunc);
+    }
+
+    // Close on Escape key
+    window.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && contactPopup.classList.contains('active')) {
+            closePopupFunc();
+        }
+    });
+
+    // Handle Popup Form Submission
+    const popupForm = document.getElementById('popupForm');
+    if (popupForm) {
+        popupForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+
+            submitBtn.innerHTML = 'Sending...';
+            submitBtn.disabled = true;
+
+            setTimeout(() => {
+                showNotification('Message sent successfully!', 'success');
+                this.reset();
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+                closePopupFunc();
+            }, 1500);
+        });
+    }
+
+    // ===================================
     // SMOOTH SCROLLING
     // ===================================
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

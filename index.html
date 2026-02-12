@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Professional Portfolio - Designer, Developer & Creative Professional">
     <meta name="keywords" content="portfolio, web developer, designer, freelancer">
-    <meta name="author" content="Your Name">
-    <title>Brilio - Personal Portfolio</title>
+    <meta name="author" content="Dulasi">
+    <title>Dulasi - Personal Portfolio</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -95,12 +95,12 @@
                         Specializing in web development, UI/UX design, and creative solutions.
                     </p>
                     <div class="hero-buttons">
-                        <a href="#portfolio" class="btn btn-primary">
-                            <span>View My Work</span>
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                        <a href="#contact" class="btn btn-outline">
+                        <a href="#contact" class="btn btn-primary contact-trigger">
                             <span>Get In Touch</span>
+                            <i class="bi bi-chat-dots"></i>
+                        </a>
+                        <a href="#portfolio" class="btn btn-outline">
+                            <span>View My Work</span>
                         </a>
                     </div>
                     <div class="hero-stats">
@@ -122,8 +122,7 @@
                     <div class="image-wrapper">
                         <div class="profile-card">
                             <div class="profile-avatar">
-                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                                    alt="Profile Image"
+                                <img src="images/profile_professional.png" alt="Profile Image"
                                     style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-2xl);">
                             </div>
                         </div>
@@ -162,8 +161,7 @@
                 <div class="about-image">
                     <div class="about-image-wrapper">
                         <div class="about-avatar">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                                alt="About Profile Image"
+                            <img src="images/profile_professional.png" alt="About Profile Image"
                                 style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-2xl);">
                         </div>
                         <div class="about-shape"></div>
@@ -184,7 +182,7 @@
                     <div class="about-info">
                         <div class="info-item">
                             <span class="info-label">Name:</span>
-                            <span class="info-value">Your Name</span>
+                            <span class="info-value">Dulasi</span>
                         </div>
                         <div class="info-item">
                             <span class="info-label">Email:</span>
@@ -980,6 +978,35 @@
     <button class="scroll-top" id="scrollTop">
         <i class="bi bi-arrow-up"></i>
     </button>
+
+    <!-- Contact Popup -->
+    <div class="contact-popup-overlay" id="contactPopup">
+        <div class="popup-backdrop"></div>
+        <div class="popup-content">
+            <div class="close-popup" id="closePopup">
+                <i class="bi bi-x-lg"></i>
+            </div>
+            <div class="popup-header">
+                <h3>Contact Me</h3>
+                <div class="h-line"></div>
+            </div>
+            <form class="popup-form" id="popupForm">
+                <div class="input-group">
+                    <label>Name</label>
+                    <input type="text" id="popupName" name="name" required placeholder="Your Name">
+                </div>
+                <div class="input-group">
+                    <label>Email</label>
+                    <input type="email" id="popupEmail" name="email" required placeholder="Your Email">
+                </div>
+                <div class="input-group">
+                    <label>Message</label>
+                    <textarea id="popupMessage" name="message" rows="4" required placeholder="Your Message"></textarea>
+                </div>
+                <button type="submit" class="button">Send Message</button>
+            </form>
+        </div>
+    </div>
 
     <!-- Scripts -->
     <script src="js/main.js"></script>
