@@ -1519,6 +1519,170 @@ textarea {
 }
 
 /* ===================================
+   CONTACT POPUP (NEWW REF)
+   =================================== */
+.contact-trigger {
+    background: linear-gradient(135deg, #ff8c05 0%, #d61a5e 100%) !important;
+    border: none !important;
+    color: #fff !important;
+    font-weight: 700 !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.contact-popup-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.popup-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+
+.popup-content {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    padding: 60px 40px;
+    border-radius: 40px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    z-index: 10001;
+    transform: scale(0.85) translateY(20px);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.contact-popup-overlay.active .popup-content {
+    transform: scale(1) translateY(0);
+}
+
+.close-popup {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    cursor: pointer;
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.close-popup:hover {
+    color: #ff8c05;
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotate(90deg);
+}
+
+.popup-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.popup-header h3 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    background: linear-gradient(135deg, #ff8c05 0%, #d61a5e 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #fff;
+}
+
+.h-line {
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(90deg, #ff8c05, #d61a5e);
+    margin: 0 auto;
+}
+
+.popup-form .input-group {
+    margin-bottom: 20px;
+}
+
+.popup-form .input-group label {
+    display: block;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.popup-form .input-group input,
+.popup-form .input-group textarea {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 15px;
+    color: #fff;
+    font-size: 15px;
+    transition: all 0.4s ease;
+}
+
+.popup-form .input-group input:focus,
+.popup-form .input-group textarea:focus {
+    outline: none;
+    border-color: #ff8c05;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.popup-form .button {
+    width: 100%;
+    background: linear-gradient(135deg, #ff8c05 0%, #d61a5e 100%);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    padding: 16px;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+.popup-form .button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(214, 26, 94, 0.3);
+}
+
+/* ===================================
    RESPONSIVE DESIGN
    =================================== */
 @media (max-width: 1024px) {
