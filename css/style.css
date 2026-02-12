@@ -1543,7 +1543,7 @@ textarea {
     justify-content: center;
     opacity: 0;
     pointer-events: none;
-    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.5s ease;
 }
 
 .contact-popup-overlay.active {
@@ -1557,62 +1557,52 @@ textarea {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.85);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .popup-content {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(25px);
-    -webkit-backdrop-filter: blur(25px);
-    padding: 60px 40px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 50px;
     border-radius: 40px;
-    width: 90%;
-    max-width: 500px;
+    width: 100%;
+    max-width: 450px;
     position: relative;
-    z-index: 10001;
-    transform: scale(0.85) translateY(20px);
-    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    z-index: 1001;
+    transform: scale(0.9);
+    transition: all 0.5s ease;
 }
 
 .contact-popup-overlay.active .popup-content {
-    transform: scale(1) translateY(0);
+    transform: scale(1);
 }
 
 .close-popup {
     position: absolute;
-    top: 25px;
-    right: 25px;
+    top: 30px;
+    right: 30px;
     cursor: pointer;
-    font-size: 24px;
+    font-size: 20px;
     color: rgba(255, 255, 255, 0.5);
     transition: all 0.3s ease;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.05);
 }
 
 .close-popup:hover {
     color: #ff8c05;
-    background: rgba(255, 255, 255, 0.1);
-    transform: rotate(90deg);
 }
 
 .popup-header {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .popup-header h3 {
     font-size: 32px;
-    font-weight: 800;
+    font-weight: 700;
     margin-bottom: 15px;
     background: linear-gradient(135deg, #ff8c05 0%, #d61a5e 100%);
     -webkit-background-clip: text;
@@ -1623,8 +1613,8 @@ textarea {
 
 .h-line {
     width: 50px;
-    height: 2px;
-    background: linear-gradient(90deg, #ff8c05, #d61a5e);
+    height: 1px;
+    background: rgba(255, 255, 255, 0.2);
     margin: 0 auto;
 }
 
@@ -1634,11 +1624,12 @@ textarea {
 
 .popup-form .input-group label {
     display: block;
-    font-size: 11px;
+    font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: rgba(255, 255, 255, 0.7);
-    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 8px;
+    margin-left: 5px;
     font-weight: 600;
 }
 
@@ -1648,16 +1639,16 @@ textarea {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
-    padding: 15px;
+    padding: 12px 20px;
     color: #fff;
-    font-size: 15px;
-    transition: all 0.4s ease;
+    font-size: 14px;
+    transition: all 0.3s ease;
 }
 
 .popup-form .input-group input:focus,
 .popup-form .input-group textarea:focus {
     outline: none;
-    border-color: #ff8c05;
+    border-color: rgba(255, 255, 255, 0.3);
     background: rgba(255, 255, 255, 0.1);
 }
 
@@ -1674,7 +1665,7 @@ textarea {
     transition: all 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .popup-form .button:hover {

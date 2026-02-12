@@ -979,29 +979,29 @@
         <i class="bi bi-arrow-up"></i>
     </button>
 
-    <!-- Contact Popup -->
-    <div class="contact-popup-overlay" id="contactPopup">
+    <!-- Contact Popup (NEWW Style) -->
+    <div id="contactPopup" class="contact-popup-overlay">
         <div class="popup-backdrop"></div>
-        <div class="popup-content">
+        <div class="glass-card popup-content" id="popupContent">
             <div class="close-popup" id="closePopup">
                 <i class="bi bi-x-lg"></i>
             </div>
             <div class="popup-header">
-                <h3>Contact Me</h3>
+                <h3>Get In Touch</h3>
                 <div class="h-line"></div>
             </div>
-            <form class="popup-form" id="popupForm">
+            <form id="popupForm" class="popup-form">
                 <div class="input-group">
                     <label>Name</label>
-                    <input type="text" id="popupName" name="name" required placeholder="Your Name">
+                    <input type="text" id="popupName" name="name" placeholder="Your Name" required>
                 </div>
                 <div class="input-group">
                     <label>Email</label>
-                    <input type="email" id="popupEmail" name="email" required placeholder="Your Email">
+                    <input type="email" id="popupEmail" name="email" placeholder="Your Email" required>
                 </div>
                 <div class="input-group">
                     <label>Message</label>
-                    <textarea id="popupMessage" name="message" rows="4" required placeholder="Your Message"></textarea>
+                    <textarea id="popupMessage" name="message" rows="4" placeholder="Your Message" required></textarea>
                 </div>
                 <button type="submit" class="button">Send Message</button>
             </form>
